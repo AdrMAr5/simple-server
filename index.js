@@ -12,4 +12,4 @@ server.use(express.static('public'));
 
 server.listen(PORT, () => {
   console.log(`Application is listening at port ${PORT}`);
-});
+// });
