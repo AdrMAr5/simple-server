@@ -5,9 +5,9 @@ const PORT = process.env.PORT || 3300;
 
 server.use(express.static('public'));
 
-server.get('/', (_req, res) => {
-  res.send('Hello Expkldfasgdfdhdfasgguhklmkjkjkhjnlkgvhkglhujlmress!');
-});
+// server.get('/', (_req, res) => {
+//   res.send('Hello Expkldfasgdfdhdfasgguhklmkjkjkhjnlkgvhkglhujlmress!');
+// });
 
 
 server.listen(PORT, () => {
