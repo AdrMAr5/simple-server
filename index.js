@@ -35,7 +35,7 @@ server.get('/error-single', (_req, res) => {
  * Stackdriver will reject the whole batch for being > 10MB.
  */
 server.get('/error-batch', (_req, res) => {
-    const logCount = 50;
+    const logCount = 150;
     const sizePerLogKB = 300;
     const data = 'Y'.repeat(sizePerLogKB * 1024);
 
