@@ -45,6 +45,17 @@ server.get('/error-batch', (_req, res) => {
     res.send(`Sent ${logCount} logs of ${sizePerLogKB}KB each.`);
 });
 
+server.get('/error-batch-small', (_req, res) => {
+    const logCount = 150;
+    const sizePerLogKB = 150;
+    const data = 'Y'.repeat(sizePerLogKB * 1024);
+
+    for (let i = 0; i < logCount; i++) {
+        console.log(`Batch log ${i}: ${data}`);
+    }
+    res.send(`Sent ${logCount} logs of ${sizePerLogKB}KB each.`);
+});
+
 server.listen(PORT, () => {
   console.log(`Application is listening at port ${PORT}`);
 });
